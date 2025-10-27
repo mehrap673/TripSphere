@@ -6,10 +6,9 @@ import { ActivityService } from '../../services/activity.service';
 import { Activity } from '../../models/activity.model';
 
 @Component({
-  selector: 'app-activities',
-  standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule],
-  template: `
+    selector: 'app-activities',
+    imports: [CommonModule, RouterModule, FormsModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
         <!-- Header -->

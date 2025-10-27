@@ -5,10 +5,9 @@ import { RouterModule, Router } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  template: `
+    selector: 'app-login',
+    imports: [CommonModule, FormsModule, RouterModule],
+    template: `
     <div class="min-h-screen relative overflow-hidden bg-gradient-to-br from-primary-600 via-secondary-600 to-pink-600 dark:from-primary-900 dark:via-secondary-900 dark:to-pink-900">
       <!-- Animated Background Shapes -->
       <div class="absolute inset-0 overflow-hidden">
@@ -183,7 +182,7 @@ import { AuthService } from '../../../services/auth.service';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(0deg); }
       33% { transform: translateY(-20px) rotate(5deg); }

@@ -6,10 +6,9 @@ import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
 
 @Component({
-  selector: 'app-profile',
-  standalone: true,
-  imports: [CommonModule, FormsModule],
-  template: `
+    selector: 'app-profile',
+    imports: [CommonModule, FormsModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
       <!-- Cover Image Section -->
       <div class="relative h-64 bg-gradient-to-br from-primary-600 via-secondary-600 to-pink-600 dark:from-primary-700 dark:via-secondary-700 dark:to-pink-700">

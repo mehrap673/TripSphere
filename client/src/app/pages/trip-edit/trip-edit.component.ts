@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-trip-edit',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
+    selector: 'app-trip-edit',
+    imports: [CommonModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20 pb-12 flex items-center justify-center">
       <div class="text-center">
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Trip Edit Page</h1>

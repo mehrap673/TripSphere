@@ -4,10 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
-  selector: 'app-google-callback',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-google-callback',
+    imports: [CommonModule],
+    template: `
     <div class="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
       <div class="text-center px-4">
         <!-- Loading Spinner -->

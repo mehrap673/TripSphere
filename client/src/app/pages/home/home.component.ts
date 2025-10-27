@@ -6,10 +6,9 @@ import { AuthService } from '../../services/auth.service';
 import { Destination } from '../../models/destination.model';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
+    selector: 'app-home',
+    imports: [CommonModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-white dark:bg-gray-950">
       <!-- Hero Section -->
       <section class="relative min-h-screen overflow-hidden">

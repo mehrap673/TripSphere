@@ -7,10 +7,9 @@ import { DestinationService } from '../../services/destination.service';
 import { Destination } from '../../models/destination.model';
 
 @Component({
-  selector: 'app-trip-create',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  template: `
+    selector: 'app-trip-create',
+    imports: [CommonModule, FormsModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950 py-8">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         

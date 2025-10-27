@@ -6,10 +6,9 @@ import { HotelService } from '../../services/hotel.service';
 import { Hotel } from '../../models/hotel.model';
 
 @Component({
-  selector: 'app-hotels',
-  standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule],
-  template: `
+    selector: 'app-hotels',
+    imports: [CommonModule, RouterModule, FormsModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
       <!-- Hero Search Section -->
       <section class="relative bg-gradient-to-br from-primary-600 via-secondary-600 to-pink-600 pt-24 pb-16">

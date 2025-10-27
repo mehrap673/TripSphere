@@ -5,10 +5,9 @@ import { TripService } from '../../services/trip.service';
 import { Trip } from '../../models/trip.model';
 
 @Component({
-  selector: 'app-trip-detail',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
+    selector: 'app-trip-detail',
+    imports: [CommonModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950 pt-20 pb-12" *ngIf="trip">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Back Button -->

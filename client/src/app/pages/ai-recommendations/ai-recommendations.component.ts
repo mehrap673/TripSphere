@@ -5,10 +5,9 @@ import { RouterModule } from '@angular/router';
 import { AiService } from '../../services/ai.service';
 
 @Component({
-  selector: 'app-ai-recommendations',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  template: `
+    selector: 'app-ai-recommendations',
+    imports: [CommonModule, FormsModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950 pt-20 pb-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->

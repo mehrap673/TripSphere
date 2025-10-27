@@ -6,10 +6,9 @@ import { DestinationService } from '../../services/destination.service';
 import { Destination } from '../../models/destination.model';
 
 @Component({
-  selector: 'app-destinations',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  template: `
+    selector: 'app-destinations',
+    imports: [CommonModule, FormsModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950 pt-20 pb-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
@@ -260,7 +259,7 @@ import { Destination } from '../../models/destination.model';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     @keyframes fade-up {
       from {
         opacity: 0;

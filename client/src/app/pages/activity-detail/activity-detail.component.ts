@@ -5,10 +5,9 @@ import { ActivityService } from '../../services/activity.service';
 import { Activity } from '../../models/activity.model';
 
 @Component({
-  selector: 'app-activity-detail',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
+    selector: 'app-activity-detail',
+    imports: [CommonModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-white dark:bg-gray-950" *ngIf="activity">
       <!-- Sticky Navigation Bar -->
       <div class="sticky top-16 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">

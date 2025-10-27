@@ -6,10 +6,9 @@ import { WeatherService } from '../../services/weather.service';
 import { Destination } from '../../models/destination.model';
 
 @Component({
-  selector: 'app-destination-detail',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
+    selector: 'app-destination-detail',
+    imports: [CommonModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950" *ngIf="destination">
       <!-- Hero Section -->
       <div class="relative h-[70vh] overflow-hidden">

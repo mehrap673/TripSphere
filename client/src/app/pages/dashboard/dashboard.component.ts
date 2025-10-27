@@ -6,10 +6,9 @@ import { AnalyticsService } from '../../services/analytics.service';
 import { User } from '../../models/user.model';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
+    selector: 'app-dashboard',
+    imports: [CommonModule, RouterModule],
+    template: `
     <div class="min-h-screen bg-gray-50 dark:bg-gray-950">
       <!-- Header Section -->
       <div class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 pt-20">
