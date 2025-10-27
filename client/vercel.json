@@ -1,15 +1,4 @@
 {
-  "version": 2,
-  "name": "tripsphere-client",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/client/browser"
-      }
-    }
-  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
