@@ -42,7 +42,6 @@ if (process.env.GEMINI_API_KEY) {
 }
 console.log('================================\n');
 
-
 // Import configs
 import { connectDatabase } from './src/config/database.js';
 import { configurePassport } from './src/config/passport.js';
@@ -163,6 +162,114 @@ app.get('/api/health', (req, res) => {
       geminiApiConfigured: !!process.env.GEMINI_API_KEY
     }
   });
+});
+
+// Root route - Welcome message
+app.get('/', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Smart Travel Planner API</title>
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          padding: 20px;
+        }
+        .container {
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          padding: 40px;
+          max-width: 600px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        .status {
+          text-align: center;
+          font-size: 1.2rem;
+          margin-bottom: 30px;
+          color: #a0f0a0;
+        }
+        .info {
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+        }
+        .info h2 {
+          font-size: 1.2rem;
+          margin-bottom: 15px;
+          color: #ffd700;
+        }
+        .endpoint {
+          background: rgba(0, 0, 0, 0.2);
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 8px;
+          font-family: 'Courier New', monospace;
+          font-size: 0.9rem;
+        }
+        .footer {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 0.9rem;
+          opacity: 0.8;
+        }
+        @media (max-width: 600px) {
+          .container { padding: 30px 20px; }
+          h1 { font-size: 2rem; }
+          .endpoint { font-size: 0.8rem; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>🌍 Smart Travel Planner</h1>
+        <div class="status">✅ Server is running</div>
+        
+        <div class="info">
+          <h2>📡 Available Endpoints</h2>
+          <div class="endpoint">/api/health - Health check</div>
+          <div class="endpoint">/api/auth - Authentication</div>
+          <div class="endpoint">/api/trips - Trip management</div>
+          <div class="endpoint">/api/destinations - Destinations</div>
+          <div class="endpoint">/api/activities - Activities</div>
+          <div class="endpoint">/api/hotels - Hotel search</div>
+          <div class="endpoint">/api/ai - AI chat & recommendations</div>
+          <div class="endpoint">/api/budget - Budget tracking</div>
+          <div class="endpoint">/api/analytics - Trip analytics</div>
+          <div class="endpoint">/api/weather - Weather data</div>
+        </div>
+
+        <div class="info">
+          <h2>🔧 Server Info</h2>
+          <div class="endpoint">Node: ${process.version}</div>
+          <div class="endpoint">Environment: ${process.env.NODE_ENV || 'development'}</div>
+          <div class="endpoint">AI Powered: ${process.env.GEMINI_API_KEY ? '✅ Yes' : '❌ No'}</div>
+        </div>
+
+        <div class="footer">
+          Made with ❤️ | ${new Date().getFullYear()}
+        </div>
+      </div>
+    </body>
+    </html>
+  `);
 });
 
 // 404 handler
