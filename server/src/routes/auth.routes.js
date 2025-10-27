@@ -2,7 +2,7 @@ import express from 'express';
 import { body } from 'express-validator';
 import passport from 'passport';
 import { authenticate } from '../middleware/auth.js';
-import * as authController from '../controllers/auth.Controller.js';
+import * as authController from '../controllers/auth.js';
 
 const router = express.Router();
 

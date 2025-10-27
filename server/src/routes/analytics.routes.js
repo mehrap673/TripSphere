@@ -5,7 +5,7 @@ import {
   getDashboardSummary,
   getTripAnalytics,
   getSpendingTrends
-} from '../controllers/analytics.Controller.js';
+} from '../controllers/analytics.js';
 
 const router = express.Router();
 

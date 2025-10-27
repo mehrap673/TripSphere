@@ -1,6 +1,6 @@
 import express from 'express';
 import { authenticate, isAdmin } from '../middleware/auth.js';
-import * as hotelController from '../controllers/hotel.Controller.js';
+import * as hotelController from '../controllers/hotel.js';
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
 import express from 'express';
 import { authenticate, isAdmin } from '../middleware/auth.js';
-import * as activityController from '../controllers/activity.Controller.js';
+import * as activityController from '../controllers/activity.js';
 
 const router = express.Router();
 
