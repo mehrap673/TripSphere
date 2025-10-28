@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production",
-    "vercel-build": "ng build --configuration production",
+    "config": "node scripts/set-env.js",
+    "vercel-build": "npm run config && ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
