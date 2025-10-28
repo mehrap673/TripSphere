@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "smart-travel-planner": {
+    "tripsphere": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -19,7 +19,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/smart-travel-planner"
+              "base": "dist/tripsphere",
+              "browser": ""
             },
             "index": "src/index.html",
             "polyfills": ["zone.js"],
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "smart-travel-planner:build:production"
+              "buildTarget": "tripsphere:build:production"
             },
             "development": {
-              "buildTarget": "smart-travel-planner:build:development"
+              "buildTarget": "tripsphere:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "smart-travel-planner:build"
+            "buildTarget": "tripsphere:build"
           }
         },
         "test": {
